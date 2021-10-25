@@ -1,29 +1,45 @@
 import scala.collection.mutable.Stack
 
-/*class GameState(
-        coveredStacks: List[Stack[Card]], 
-        uncoveredStacks: List[Stack[Card]], 
-        aceStacks: List[Stack[Card]], 
-        discardStack: Stack[Card], 
-        drawStack: Stack[Card], 
-        cardsToFlip: Int, 
-        deck: Deck,
-        deckStack: Stack[Card]) {
-        //List of all coverd card stacks
-        private var _coveredStacks: List[Stack[Card]] = List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]())
-        //List of all uncovered card stacks
-        private var _uncoveredStacks: List[Stack[Card]] = List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]())
-        //List of all ace card stacks
-        private var _aceStacks: List[Stack[Card]] = List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]())
+class GameState(
+        private val _coveredStacks: List[Stack[Card]],
+        private val _uncoveredStacks: List[Stack[Card]],
+        private val _aceStacks: List[Stack[Card]],
+        private val _discardStack: Stack[Card],
+        private val _drawStack: Stack[Card],
+        private val _cardsToFlip: Int,
+        private val _deck: List[Card],
+        private val _deckStack: Stack[Card]) 
+        {
 
-        private val _discardStack = Stack[Card]()
-        private val _drawStack = Stack[Card]()
-        private var _cardsToFlip = 1
+        def this() {
+                GameState(
+                        List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]()),
+                        List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]()),
+                        List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]()),
+                        Stack[Card](),
+                        Stack[Card](),
+                        1,
+                        Deck.shuffleDeck(Deck.shuffleDeck(Deck.generateDeck))
+                        Stack[Card]().pushAll(deck)
+                )
+                /*
+                //List of all coverd card stacks
+                private val _coveredStacks: List[Stack[Card]] = List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]())
+                //List of all uncovered card stacks
+                private val _uncoveredStacks: List[Stack[Card]] = List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]())
+                //List of all ace card stacks
+                private val _aceStacks: List[Stack[Card]] = List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]())
 
-        //Generate and shuffle the deck, then push it all to a stack
-        private val _deck = Deck.shuffleDeck(Deck.shuffleDeck(Deck.generateDeck))
-        private val _deckStack: Stack[Card] = Stack[Card]()
-        _deckStack.pushAll(deck)
+                private val _discardStack = Stack[Card]()
+                private val _drawStack = Stack[Card]()
+                private var _cardsToFlip = 1
+
+                //Generate and shuffle the deck, then push it all to a stack
+                private val _deck = Deck.shuffleDeck(Deck.shuffleDeck(Deck.generateDeck))
+                private val _deckStack: Stack[Card] = Stack[Card]()
+                _deckStack.pushAll(deck)
+                */
+        }
 
         def coveredStacks = _coveredStacks
         def uncoveredStacks = _uncoveredStacks
@@ -32,8 +48,5 @@ import scala.collection.mutable.Stack
         def drawStack = _drawStack
         def deck = _deck
         def deckStack = _deckStack
-        def cardsToFlip = _cardsToFlip
-
-
-        
-}*/
+        def cardsToFlip = _cardsToFlip   
+}

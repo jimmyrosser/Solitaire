@@ -3,37 +3,39 @@ import scala.collection.mutable.Stack
 
 object main {
 
-  //var currentGameState = GameState
+  var gameState: GameState = GameState()
 
   //List of all coverd card stacks
-  var coveredStacks: List[Stack[Card]] = List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]())
+  var coveredStacks: List[Stack[Card]] = gameState.coveredStacks
 
   //List of all uncovered card stacks
-  var uncoveredStacks: List[Stack[Card]] = List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]())
+  var uncoveredStacks: List[Stack[Card]] = gameState.uncoveredStacks
 
   //List of all ace card stacks
-  var aceStacks: List[Stack[Card]] = List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]())
+  var aceStacks: List[Stack[Card]] = gameState.aceStacks
 
   //All stacks where playable cards could be/moves could be made
   var allStacks: List[Stack[Card]] = uncoveredStacks ++ aceStacks
 
   //Discard and draw stack
-  val discardStack = Stack[Card]()
-  val drawStack = Stack[Card]()
+  val discardStack = gameState.discardStack
+  val drawStack = gameState.drawStack
 
   //Cards to flip per draw
-  var cardsToFlip = 1
+  var cardsToFlip = gameState.cardsToFlip
 
   //Generate and shuffle the deck, then push it all to a stack
-  val deck = Deck.shuffleDeck(Deck.shuffleDeck(Deck.generateDeck))
+  val deck = gameState.deck
   //Used for testing
   //val deck = Deck.generateDeck
-  val deckStack: Stack[Card] = Stack[Card]()
+  val deckStack: Stack[Card] = gameState.deckStack
   deckStack.pushAll(deck)
 
   //List of all the stacks (ace and solitaire) as well as the discard stack
   //Used for searching for cards to move
   var allStacksAndDiscardStack:List[Stack[Card]] = uncoveredStacks ++ aceStacks ++ List(discardStack)
+
+  val gameStateHistory: Stack[GameState] = Stack[GameState](gameState)
   /*
   //////////////////////////////////////////////
   -------------------- MAIN --------------------
@@ -929,6 +931,7 @@ object main {
     fixStacksAfterMove()
     //Rebuild the collections of stacks after modiftying the individual stacks with moves
     rebuildStacks()
+    updateGameState()
     //Reprint the board after updates
     printGame()
   }
@@ -1002,6 +1005,23 @@ object main {
     allStacks = uncoveredStacks ++ aceStacks
     //Rebuild allStacksAndDiscardStack collection
     allStacksAndDiscardStack = uncoveredStacks ++ aceStacks ++ List(discardStack)
+  }
+
+  /*
+  ////////////////////////////////////////////////////////
+  -------------------- UPDATE GAME STATE -----------------
+  ////////////////////////////////////////////////////////
+
+  This function updates the game state with the new stacks 
+  and adds the previous game state to a history
+
+  */  
+
+  def updateGameState() = {
+    if(gameState != null) {
+      gameStateHistory.push(gameState)
+    }
+    gameState = GameState(uncoveredStacks, coveredStacks, aceStacks, discardStack, drawStack, cardsToFlip, deck, deckStack)
   }
 
   /*
