@@ -11,16 +11,16 @@ class GameState(
         private val _deckStack: Stack[Card]) 
         {
 
-        def this() {
-                GameState(
+        def this() = {
+                this(
                         List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]()),
                         List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]()),
                         List(Stack[Card](), Stack[Card](), Stack[Card](), Stack[Card]()),
                         Stack[Card](),
                         Stack[Card](),
                         1,
-                        Deck.shuffleDeck(Deck.shuffleDeck(Deck.generateDeck))
-                        Stack[Card]().pushAll(deck)
+                        Deck.shuffleDeck(Deck.shuffleDeck(Deck.generateDeck)),
+                        Stack[Card]()
                 )
                 /*
                 //List of all coverd card stacks

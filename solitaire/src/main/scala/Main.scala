@@ -1,5 +1,6 @@
 import scala.io.StdIn._
 import scala.collection.mutable.Stack
+import java.awt.CardLayout
 
 object main {
 
@@ -18,17 +19,17 @@ object main {
   var allStacks: List[Stack[Card]] = uncoveredStacks ++ aceStacks
 
   //Discard and draw stack
-  val discardStack = gameState.discardStack
-  val drawStack = gameState.drawStack
+  var discardStack = gameState.discardStack
+  var drawStack = gameState.drawStack
 
   //Cards to flip per draw
   var cardsToFlip = gameState.cardsToFlip
 
   //Generate and shuffle the deck, then push it all to a stack
-  val deck = gameState.deck
+  var deck = gameState.deck
   //Used for testing
   //val deck = Deck.generateDeck
-  val deckStack: Stack[Card] = gameState.deckStack
+  var deckStack: Stack[Card] = gameState.deckStack
   deckStack.pushAll(deck)
 
   //List of all the stacks (ace and solitaire) as well as the discard stack
@@ -931,9 +932,9 @@ object main {
     fixStacksAfterMove()
     //Rebuild the collections of stacks after modiftying the individual stacks with moves
     rebuildStacks()
-    updateGameState()
     //Reprint the board after updates
     printGame()
+    updateGameState()
   }
 
   /*
@@ -1019,9 +1020,53 @@ object main {
 
   def updateGameState() = {
     if(gameState != null) {
+      println("pushed current game state")
       gameStateHistory.push(gameState)
+      println("Game State History Size: " + gameStateHistory.size)
+    gameState.uncoveredStacks.map(s => println("Old Uncovered Size: " + s.size))
+    gameState.coveredStacks.map(s => println("Old Covered Size: " + s.size))
+    gameState.aceStacks.map(s => println("Old Ace Size: " + s.size))
+    println("Old Discard Stack Size: " + gameState.discardStack.size)
+    println("Old Draw Stack Size: " + gameState.drawStack.size)
+    println("Old Deck Size: " + gameState.deck.size)
+    println("Old Deck Stack Size: " + gameState.deckStack.size)
     }
-    gameState = GameState(uncoveredStacks, coveredStacks, aceStacks, discardStack, drawStack, cardsToFlip, deck, deckStack)
+    gameState = GameState(coveredStacks, uncoveredStacks, aceStacks, discardStack, drawStack, cardsToFlip, deck, deckStack)
+    println("instantiated new game state")
+    gameState.uncoveredStacks.map(s => println("New Uncovered Size: " + s.size))
+    gameState.coveredStacks.map(s => println("New Covered Size: " + s.size))
+    gameState.aceStacks.map(s => println("New Ace Size: " + s.size))
+    println("New Discard Stack Size: " + gameState.discardStack.size)
+    println("New Draw Stack Size: " + gameState.drawStack.size)
+    println("New Deck Size: " + gameState.deck.size)
+    println("New Deck Stack Size: " + gameState.deckStack.size)
+    //println(gameState.uncoveredStacks.size)
+    //println(gameState.coveredStacks.size)
+    //println(gameState.uncoveredStacks.size)
+
+  }
+
+  /*
+  /////////////////////////////////////////////////////
+  -------------------- SET GAME STATE -----------------
+  /////////////////////////////////////////////////////
+
+  This function takes a game state and sets the local 
+  variables based on the game state
+
+  */ 
+
+  def setGameState(state: GameState) = {
+      println("in set game state")
+      coveredStacks = state.coveredStacks
+      uncoveredStacks = state.uncoveredStacks
+      aceStacks = state.aceStacks
+      discardStack = state.discardStack
+      drawStack = state.drawStack
+      cardsToFlip = state.cardsToFlip
+      deck = state.deck
+      deckStack = state.deckStack
+      updateGameWithoutPrint()
   }
 
   /*
@@ -1452,6 +1497,11 @@ object main {
       println("q -                quit the game")
       println()
     }
+    else if(line.toLowerCase == "undo") {
+      println("HERE")
+      gameStateHistory.pop()
+      setGameState(gameStateHistory.pop())
+    }
     //draws a card from the deck and adds it face up to the discard pile
     else if(line.toLowerCase == "draw")
     {
@@ -1459,7 +1509,7 @@ object main {
       if(drawStack.isEmpty) {
         drawStack.pushAll(discardStack).reverse
         discardStack.clear()
-        updateGame()
+        //updateGame()
       }
       //Check if 3 cards are being flipped and if there are enough cards in the draw stack
       else if(cardsToFlip == 3 && drawStack.length >= 3) {
@@ -1469,7 +1519,7 @@ object main {
         discardStack.push(card2)
         var card3 = drawStack.pop
         discardStack.push(card3)
-        updateGame()
+        //updateGame()
       }
       //Check if 3 cards are being flipped and if there are not enough (2) cards in the draw stack
       else if(cardsToFlip == 3 && drawStack.length == 2) {
@@ -1477,18 +1527,18 @@ object main {
         discardStack.push(card1)
         var card2 = drawStack.pop
         discardStack.push(card2)
-        updateGame()
+        //updateGame()
       }
       //Check if 3 cards are being flipped and if there are not enough (1) cards in the draw stack
       else if(cardsToFlip == 3 && drawStack.length == 1) {
         var card1 = drawStack.pop
         discardStack.push(card1)
-        updateGame()
+        //updateGame()
       }
       //Check if 1 card is being flipped
       else if(cardsToFlip == 1) {
         discardStack.push(drawStack.pop)
-        updateGame()
+        //updateGame()
       }
       updateGame()
     }
