@@ -879,7 +879,7 @@ object main {
     println()
 
     //Print the game board
-    updateGame()
+    printGame()
 
     //handle input during game
     while(running) {
@@ -928,6 +928,7 @@ object main {
 
   */
   def updateGame(): Unit = {
+    println("Updating game")
     //Push blank cards onto any necessary stacks and pop from covered stack if necessary
     fixStacksAfterMove()
     //Rebuild the collections of stacks after modiftying the individual stacks with moves
@@ -935,6 +936,8 @@ object main {
     //Reprint the board after updates
     printGame()
     updateGameState()
+    println("Game state updated")
+    println("Game State History Size: " + gameStateHistory.size)
   }
 
   /*
@@ -951,6 +954,25 @@ object main {
     fixStacksAfterMove()
     //Rebuild the collections of stacks after modiftying the individual stacks with moves
     rebuildStacks()
+  }
+
+  /*
+  //////////////////////////////////////////////////////////////////
+  -------------- UPDATE GAME WITHOUT GAME STATE UPDATE -------------
+  //////////////////////////////////////////////////////////////////
+
+  This function updates the game by updating the stacks, 
+  rebuilding the lists of stacks, and printing the game, but does 
+  not update the game state
+
+  */
+  def updateGameWithoutGameStateUpdate(): Unit = {
+    //Push blank cards onto any necessary stacks and pop from covered stack if necessary
+    fixStacksAfterMove()
+    //Rebuild the collections of stacks after modiftying the individual stacks with moves
+    rebuildStacks()
+    //Reprint the board after updates
+    printGame()
   }
 
   /*
@@ -1066,7 +1088,7 @@ object main {
       cardsToFlip = state.cardsToFlip
       deck = state.deck
       deckStack = state.deckStack
-      updateGameWithoutPrint()
+      updateGameWithoutGameStateUpdate()
   }
 
   /*
@@ -1576,7 +1598,7 @@ object main {
       }
       if (validCommand) {
         moveMultipleCards(Card(cardToMoveValue, convertSuitForCard(cardToMoveSuit)), currentStack, stackToMoveTo)
-        updateGame()
+        //updateGame()
       }
       updateGame()
     }

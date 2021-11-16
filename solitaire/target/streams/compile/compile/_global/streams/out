@@ -1,29 +1,29 @@
-[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1026:4 [0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m1026 |[0m    gameState.uncoveredStacks.map([36ms[0m => println([31m"Old Uncovered Size: "[0m + s.size))[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1048:4 [0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m1048 |[0m    gameState.uncoveredStacks.map([36ms[0m => println([31m"Old Uncovered Size: "[0m + s.size))[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    [33m^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1027:4 [0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m1027 |[0m    gameState.coveredStacks.map([36ms[0m => println([31m"Old Covered Size: "[0m + s.size))[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1049:4 [0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m1049 |[0m    gameState.coveredStacks.map([36ms[0m => println([31m"Old Covered Size: "[0m + s.size))[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    [33m^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1028:4 [0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m1028 |[0m    gameState.aceStacks.map([36ms[0m => println([31m"Old Ace Size: "[0m + s.size))[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1050:4 [0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m1050 |[0m    gameState.aceStacks.map([36ms[0m => println([31m"Old Ace Size: "[0m + s.size))[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    [33m^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1029:4 [0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m1029 |[0m    println([31m"Old Discard Stack Size: "[0m + gameState.discardStack.size)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1051:4 [0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m1051 |[0m    println([31m"Old Discard Stack Size: "[0m + gameState.discardStack.size)[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    [33m^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1030:4 [0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m1030 |[0m    println([31m"Old Draw Stack Size: "[0m + gameState.drawStack.size)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1052:4 [0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m1052 |[0m    println([31m"Old Draw Stack Size: "[0m + gameState.drawStack.size)[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    [33m^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1031:4 [0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m1031 |[0m    println([31m"Old Deck Size: "[0m + gameState.deck.size)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1053:4 [0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m1053 |[0m    println([31m"Old Deck Size: "[0m + gameState.deck.size)[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    [33m^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1032:4 [0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m1032 |[0m    println([31m"Old Deck Stack Size: "[0m + gameState.deckStack.size)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m-- Warning: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/src/main/scala/Main.scala:1054:4 [0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m1054 |[0m    println([31m"Old Deck Stack Size: "[0m + gameState.deckStack.size)[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    [33m^[0m[0m
 [0m[[0m[33mwarn[0m] [0m[0m     |    Line is indented too far to the left, or a `}` is missing[0m
 [0m[[0m[33mwarn[0m] [0m[0m7 warnings found[0m
