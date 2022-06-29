@@ -1,1 +1,35 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/solitare-server_3-0.1.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/solitare-server_3-0.1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Color$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Color$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Card.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Card.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Suit$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Suit$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Card.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Card.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Color.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Color.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Deck.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Deck.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Suit.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Suit.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GameState.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/GameState.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/main.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Deck$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Deck$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	GameState.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/GameState.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Suit.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Suit.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Deck.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Deck.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Color.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jimmyrosser/VSCodeProjects/Solitaire/solitaire/target/scala-3.0.2/classes/Color.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

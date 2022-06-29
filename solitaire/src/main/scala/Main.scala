@@ -928,7 +928,7 @@ object main {
 
   */
   def updateGame(): Unit = {
-    println("Updating game")
+    //println("Updating game")
     //Push blank cards onto any necessary stacks and pop from covered stack if necessary
     fixStacksAfterMove()
     //Rebuild the collections of stacks after modiftying the individual stacks with moves
@@ -936,8 +936,8 @@ object main {
     //Reprint the board after updates
     printGame()
     updateGameState()
-    println("Game state updated")
-    println("Game State History Size: " + gameStateHistory.size)
+    //println("Game state updated")
+    //println("Game State History Size: " + gameStateHistory.size)
   }
 
   /*
@@ -1042,26 +1042,26 @@ object main {
 
   def updateGameState() = {
     if(gameState != null) {
-      println("pushed current game state")
+      //println("pushed current game state")
       gameStateHistory.push(gameState)
-      println("Game State History Size: " + gameStateHistory.size)
-    gameState.uncoveredStacks.map(s => println("Old Uncovered Size: " + s.size))
-    gameState.coveredStacks.map(s => println("Old Covered Size: " + s.size))
-    gameState.aceStacks.map(s => println("Old Ace Size: " + s.size))
-    println("Old Discard Stack Size: " + gameState.discardStack.size)
-    println("Old Draw Stack Size: " + gameState.drawStack.size)
-    println("Old Deck Size: " + gameState.deck.size)
-    println("Old Deck Stack Size: " + gameState.deckStack.size)
+      //println("Game State History Size: " + gameStateHistory.size)
+    //gameState.uncoveredStacks.map(s => println("Old Uncovered Size: " + s.size))
+    //gameState.coveredStacks.map(s => println("Old Covered Size: " + s.size))
+    //gameState.aceStacks.map(s => println("Old Ace Size: " + s.size))
+    //println("Old Discard Stack Size: " + gameState.discardStack.size)
+    //println("Old Draw Stack Size: " + gameState.drawStack.size)
+    //println("Old Deck Size: " + gameState.deck.size)
+    //println("Old Deck Stack Size: " + gameState.deckStack.size)
     }
     gameState = GameState(coveredStacks, uncoveredStacks, aceStacks, discardStack, drawStack, cardsToFlip, deck, deckStack)
-    println("instantiated new game state")
-    gameState.uncoveredStacks.map(s => println("New Uncovered Size: " + s.size))
-    gameState.coveredStacks.map(s => println("New Covered Size: " + s.size))
-    gameState.aceStacks.map(s => println("New Ace Size: " + s.size))
-    println("New Discard Stack Size: " + gameState.discardStack.size)
-    println("New Draw Stack Size: " + gameState.drawStack.size)
-    println("New Deck Size: " + gameState.deck.size)
-    println("New Deck Stack Size: " + gameState.deckStack.size)
+    //println("instantiated new game state")
+    //gameState.uncoveredStacks.map(s => println("New Uncovered Size: " + s.size))
+    //gameState.coveredStacks.map(s => println("New Covered Size: " + s.size))
+    //gameState.aceStacks.map(s => println("New Ace Size: " + s.size))
+    //println("New Discard Stack Size: " + gameState.discardStack.size)
+    //println("New Draw Stack Size: " + gameState.drawStack.size)
+    //println("New Deck Size: " + gameState.deck.size)
+    //println("New Deck Stack Size: " + gameState.deckStack.size)
     //println(gameState.uncoveredStacks.size)
     //println(gameState.coveredStacks.size)
     //println(gameState.uncoveredStacks.size)
@@ -1079,7 +1079,7 @@ object main {
   */ 
 
   def setGameState(state: GameState) = {
-      println("in set game state")
+      //println("in set game state")
       coveredStacks = state.coveredStacks
       uncoveredStacks = state.uncoveredStacks
       aceStacks = state.aceStacks
